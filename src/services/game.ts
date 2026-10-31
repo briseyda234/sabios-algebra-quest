@@ -21,7 +21,9 @@ function must<T>(res: { data: T | null; error: { message: string } | null }): T 
 export async function fetchProfile() {
   const { data: u } = await supabase.auth.getUser();
   if (!u.user) throw new Error("No autenticado");
-  return must(await supabase.from("profiles").select("id, display_name").eq("id", u.user.id).single());
+  const { data, error } = await supabase.from("profiles").select("id, display_name").eq("id", u.user.id).maybeSingle();
+  if (error) throw new Error(error.message);
+  return { id: u.user.id, display_name: data?.display_name ?? "Aventurero" };
 }
 
 export async function fetchLevels(): Promise<Level[]> {
