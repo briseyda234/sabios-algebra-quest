@@ -56,7 +56,16 @@ function AuthPage() {
       navigate({ to: "/dashboard", replace: true });
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Algo salió mal";
-      toast.error(msg.includes("already registered") ? "Ese correo ya tiene una cuenta." : msg);
+      const lower = msg.toLowerCase();
+      toast.error(
+        lower.includes("already registered")
+          ? "Ese correo ya tiene una cuenta."
+          : lower.includes("password")
+            ? "Esa contraseña es muy común o débil. Elige otra más segura."
+            : lower.includes("email")
+              ? "Revisa que el correo electrónico sea válido."
+              : msg,
+      );
     } finally {
       setBusy(false);
     }
