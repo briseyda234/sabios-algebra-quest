@@ -28,11 +28,11 @@ function Dashboard() {
         <div className="space-y-6">
           <section className="glass-panel flex flex-col items-center gap-5 p-5 sm:flex-row sm:p-7">
             <div className="grid size-20 shrink-0 place-items-center rounded-full bg-gold-gradient font-display text-3xl font-black text-gold-foreground ring-4 ring-lavender/30">
-              {data.profile.display_name.charAt(0).toUpperCase()}
+              {(data.profile?.display_name ?? "Aventurero").charAt(0).toUpperCase()}
             </div>
             <div className="flex-1 text-center sm:text-left">
               <p className="text-sm font-bold text-lavender/70">Bienvenido de nuevo,</p>
-              <h1 className="break-words text-2xl font-bold sm:text-3xl">{data.profile.display_name}</h1>
+              <h1 className="break-words text-2xl font-bold sm:text-3xl">{(data.profile?.display_name ?? "Aventurero")}</h1>
               <p className="mt-1 text-sm text-gold">
                 Nivel actual: {data.current ? `${data.current.id}. ${data.current.title}` : "—"}
               </p>

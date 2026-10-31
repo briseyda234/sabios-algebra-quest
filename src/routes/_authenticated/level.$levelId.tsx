@@ -96,6 +96,7 @@ function LevelPage() {
     );
   }
 
+  if (!q) return null;
   if (result) return <AppShell><Results level={level.title} r={result} onRetry={restart} /></AppShell>;
 
   const mood: SabioMood = !feedback ? "thinking" : feedback.is_correct ? "happy" : "motivating";

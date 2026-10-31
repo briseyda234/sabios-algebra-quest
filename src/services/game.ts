@@ -62,20 +62,24 @@ export async function fetchLevelQuestions(levelId: number): Promise<QuizQuestion
 /** Server-side check of a single answer. */
 export async function checkAnswer(questionId: string, optionId: string) {
   const rows = must(await supabase.rpc("check_answer", { _question_id: questionId, _option_id: optionId }));
-  return rows[0];
+  const row = rows[0];
+  if (!row) throw new Error("Sin respuesta del servidor");
+  return row;
 }
 
 /** Server grades the whole level, stores the attempt and updates best progress. */
 export async function submitLevel(levelId: number, answers: { question_id: string; option_id: string }[]) {
   const rows = must(await supabase.rpc("submit_level", { _level_id: levelId, _answers: answers }));
-  return rows[0];
+  const row = rows[0];
+  if (!row) throw new Error("Sin respuesta del servidor");
+  return row;
 }
 
 export function levelStatuses(levels: Level[], progress: Progress[]): Record<number, LevelStatus> {
   const done = new Set(progress.filter((p) => p.completed).map((p) => p.level_id));
   const out: Record<number, LevelStatus> = {};
   levels.forEach((l, i) => {
-    out[l.id] = done.has(l.id) ? "completed" : i === 0 || done.has(levels[i - 1].id) ? "available" : "locked";
+    out[l.id] = done.has(l.id) ? "completed" : i === 0 || done.has(levels[i - 1]!.id) ? "available" : "locked";
   });
   return out;
 }

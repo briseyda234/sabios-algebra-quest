@@ -10,7 +10,7 @@ import { Logo } from "@/components/game/Logo";
 type Mode = "login" | "signup";
 
 export const Route = createFileRoute("/auth")({
-  validateSearch: (s: Record<string, unknown>): { mode: Mode } => ({ mode: s.mode === "signup" ? "signup" : "login" }),
+  validateSearch: (s: Record<string, unknown>): { mode: Mode } => ({ mode: s["mode"] === "signup" ? "signup" : "login" }),
   head: () => ({
     meta: [
       { title: "Entrar a AlgebraQuest" },

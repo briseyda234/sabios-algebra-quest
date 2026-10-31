@@ -40,7 +40,7 @@ function MapPage() {
           {/* winding path */}
           <div aria-hidden className="absolute bottom-10 left-1/2 top-10 hidden w-1 -translate-x-1/2 border-l-4 border-dashed border-gold/50 sm:block" />
           {data.levels.map((lvl, i) => {
-            const status = data.statuses[lvl.id];
+            const status: LevelStatus = data.statuses[lvl.id] ?? "locked";
             const prog = data.progress.find((p) => p.level_id === lvl.id);
             const right = i % 2 === 1;
             return (
