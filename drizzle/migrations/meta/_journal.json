@@ -1,5 +1,13 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": []
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1793482100475,
+      "tag": "0000_algebraquest_schema",
+      "breakpoints": true
+    }
+  ]
 }
