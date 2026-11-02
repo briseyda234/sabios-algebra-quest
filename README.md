@@ -1,5 +1,65 @@
-# Sabios Algebra Quest
+# AlgebraQuest
+AlgebraQuest es una plataforma web educativa diseñada para ayudar a estudiantes de secundaria a aprender álgebra básica mediante ejercicios interactivos y elementos de gamificación.
+La página utiliza una temática de fantasía medieval, donde los estudiantes recorren cuatro niveles de aprendizaje para superar diferentes desafíos matemáticos.
+Adaptabilidad:
+Se considera el diseño responsivo para computadoras, tabletas y celulares, ajustando la distribución de los elementos, tamaños de texto, botones y tarjetas.
 
+OBJETIVO:
+El objetivo es hacer que el aprendizaje de álgebra sea más dinámico,entretenido y accesible.
+
+CARACTERÍSTICAS PRINCIPALES
+1.-Página de inicio.
+2.-Registro e inicio de sesión.
+3.-Mapa de Aventura llamada "Isla de las Variables".
+4-Panel de estudiante con información de su progreso.
+5.-Cuatro niveles.
+6.-Ejercicios de opción múltiple.
+7.-Retroalimentación y explicaciones de las respuestas.
+8.-Sistema de puntos y estrellas.
+9.-Mascota interactiva llamada Sabio X, un búho mago que acompaña al estudiante.
+10.-Diseño adaptable a computadoras y dispositivos móviles.
+
+NIVELES DE APRENDIZAJE
+1.-Conceptos básicos de álgebra.
+2.-Expresiones algebraicas.
+3.-Términos semejantes.
+4.-Operaciones algebraicas.
+
+HERRAMIENTAS Y TECNOLOGÍAS
+1.-Lovable: plataforma utilizada para crear y desarrollar la aplicación mediante instrucciones en lenguaje natural.
+2.-Inteligencia artificial: apoyo para generar código, mejorar funcionalidades y resolver errores.
+3.-GitHub: almacenamiento y administración del código fuente.
+
+TECNOLOGÍAS
+1-React.
+2.-TypeScript.
+3.-Tailwind CSS.
+4.-React Router.
+5.-Love cloud.
+
+
+DISEÑO
+La aplicación utiliza una ambientación de fantasía medieval con castillos, islas flotantes y elementos mágicos.
+Colores principales:
+1.-Morado: #6555DB
+2.-Amarillo: #FFCF4A
+3.-Verde: #39C99A
+4.-Lavanda: #F4F5FF
+5.-Azul oscuro: #1E1B4B
+
+Tipografías:
+1.-Cinzel para títulos.
+2.-Nunito para textos.
+
+ACCESO AL PROYECTO:
+AlgebraQuest fue desarrollado y publicado utilizando Lovable, una plataforma que permite crear aplicaciones web con apoyo de inteligencia artificial.
+ LINK DE PUBLICACIÓN DEL PROYECTO: 
+ https://sabios-algebra-quest.lovable.app
+ 
+
+PROMPT UTILIZADOS:
+
+PROMT:
 Actúa como un desarrollador Full Stack Senior, arquitecto de software, diseñador UI/UX especializado en aplicaciones educativas y experto en gamificación.
 Quiero que construyas desde cero una aplicación web educativa llamada AlgebraQuest, cuyo objetivo es enseñar álgebra básica a estudiantes de secundaria mediante ejercicios interactivos con temática de aventura fantástica medieval.
 Eslogan: "Resuelve, avanza y conquista".
@@ -212,7 +272,7 @@ Crear a Sabio X y sus expresiones.
 Construir la página de inicio.
 Implementar registro e inicio de sesión.
 Construir el panel del estudiante.
-Crear el mapa de los siete niveles.
+Crear el mapa de los 4 niveles.
 Crear las 20 preguntas.
 Implementar ejercicios, puntuación y resultados.
 Configurar Supabase y políticas RLS.
